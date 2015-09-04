@@ -27,7 +27,7 @@ ajax(
     console.log('Successfully fetched weather data!');
     
     var location = data.name;
-    var temperature = Math.round(data.main.temp - 273.15) + 'C';
+    var temperature = Math.round(((data.main.temp - 273.15)* 1.8000 + 32.00)) + 'F';
     
     var description = data.weather[0].description;
     description = description.charAt(0).toUpperCase() + description.substring(1);
